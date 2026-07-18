@@ -1,1 +1,204 @@
-jdek
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reserve a $15 Chelsea's Kitchen Thursday lunch for delivery at Carleton University.">
+  <meta name="theme-color" content="#0b5558">
+  <title>Thursday Lunch Club | Chelsea's Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Bebas+Neue&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-note">Fresh every Thursday · Limited quantities · Delivered at Carleton</div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="mini-brand" href="https://chelseaskitchen.ca" aria-label="Chelsea's Kitchen home"><img src="assets/logo.jpg" alt="Chelsea's Kitchen"></a>
+      <a class="nav-order" href="#order">Order lunch</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="paint paint-one" aria-hidden="true"></div>
+      <div class="paint paint-two" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">CARLETON UNIVERSITY</p>
+          <h1>Thursday<br><span>Lunch Club</span></h1>
+          <p class="hero-lead">A fresh Indigenous lunch and dessert, handmade Thursday morning and delivered across campus.</p>
+          <div class="hero-price">
+            <strong>$15</strong>
+            <span>Lunch + dessert<br>delivery included</span>
+          </div>
+          <a class="button" href="#order">Reserve my lunch <span aria-hidden="true">♡</span></a>
+          <p class="deadline">Order by Wednesday at 8:00 PM</p>
+        </div>
+
+        <div class="hero-collage">
+          <div class="logo-frame"><img src="assets/logo.jpg" alt="Chelsea's Kitchen logo"></div>
+          <figure class="photo photo-taco"><img src="assets/taco.jpg" alt="Reconciliation Taco with baked bannock, veggie chili and taco toppings"></figure>
+          <figure class="photo photo-berry"><img src="assets/berry.jpg" alt="Maple Berry Bite with baked bannock, berries and Awazibi maple syrup"></figure>
+          <div class="love-note">Made fresh.<br>Delivered with care. ♡</div>
+        </div>
+      </div>
+      <div class="tree-line" aria-hidden="true"></div>
+    </section>
+
+    <section class="meal wrap" aria-labelledby="meal-heading">
+      <div class="section-intro">
+        <p class="eyebrow teal">YOUR THURSDAY LUNCH</p>
+        <h2 id="meal-heading">Two favourites. One beautiful lunch.</h2>
+      </div>
+
+      <div class="meal-grid">
+        <article class="meal-card">
+          <div class="meal-image"><img src="assets/taco.jpg" alt="Reconciliation Taco"></div>
+          <div class="meal-copy">
+            <span class="number">01</span>
+            <p class="script">The savoury one</p>
+            <h3>Reconciliation Taco</h3>
+            <p>Fresh baked bannock, veggie chili and colourful taco toppings.</p>
+          </div>
+        </article>
+
+        <div class="plus-mark" aria-hidden="true">+</div>
+
+        <article class="meal-card reverse">
+          <div class="meal-image"><img src="assets/berry.jpg" alt="Maple Berry Bite"></div>
+          <div class="meal-copy">
+            <span class="number">02</span>
+            <p class="script">The sweet one</p>
+            <h3>Maple Berry Bite</h3>
+            <p>Fresh baked bannock, berries and Awazibi maple syrup.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="included-strip">
+        <span>Lunch-size taco</span><b>+</b><span>Maple berry dessert</span><b>+</b><span>Napkin & utensils</span><strong>$15</strong>
+      </div>
+    </section>
+
+    <section class="story-band">
+      <div class="wrap story-grid">
+        <div>
+          <p class="eyebrow light">FOOD WITH PURPOSE</p>
+          <h2>Every lunch matters.</h2>
+        </div>
+        <div>
+          <p>Every Thursday lunch supports an Algonquin-owned small business built around food, community and reconciliation.</p>
+          <p class="miigwech">Miigwech for supporting Chelsea's Kitchen. ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery wrap">
+      <div class="delivery-card">
+        <span class="delivery-icon" aria-hidden="true">⌖</span>
+        <div><small>WHERE</small><h3>Across Carleton campus</h3><p>Choose your building and meeting spot in the form.</p></div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon" aria-hidden="true">◷</span>
+        <div><small>WHEN</small><h3>Thursday, 11:30–1:00</h3><p>Select the delivery window that works best for you.</p></div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon" aria-hidden="true">▣</span>
+        <div><small>PAYMENT</small><h3>Pay when it arrives</h3><p>Square tap or cash on delivery only.</p></div>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="wrap order-shell">
+        <div class="order-heading">
+          <p class="eyebrow light">YOUR THURSDAY LUNCH</p>
+          <h2>Place your order <span>♡</span></h2>
+          <p>No prepayment. Your completed order opens in your email app for you to review and send.</p>
+        </div>
+
+        <form id="orderForm" novalidate>
+          <div class="form-section">
+            <div class="form-title"><span>1</span><h3>Who are we delivering to?</h3></div>
+            <div class="form-grid three">
+              <label>Full name *<input name="name" autocomplete="name" required></label>
+              <label>Carleton email *<input type="email" name="email" autocomplete="email" placeholder="name@cmail.carleton.ca" required></label>
+              <label>Phone number *<input type="tel" name="phone" autocomplete="tel" required></label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-title"><span>2</span><h3>Where and when?</h3></div>
+            <div class="form-grid two">
+              <label>Building *
+                <select name="building" required>
+                  <option value="">Choose your building</option>
+                  <option>Nideyinàn</option><option>University Centre</option><option>Richcraft Hall</option><option>Loeb Building</option><option>MacOdrum Library</option><option>Canal Building</option><option>Athletics</option><option>Other</option>
+                </select>
+              </label>
+              <label>Room number / meeting spot *<input name="meetingSpot" placeholder="e.g. 2103, outside Library" required></label>
+            </div>
+            <fieldset>
+              <legend>Delivery time preference *</legend>
+              <div class="choice-grid three-choice">
+                <label><input type="radio" name="time" value="11:30–12:00" required><span>11:30–12:00</span></label>
+                <label><input type="radio" name="time" value="12:00–12:30"><span>12:00–12:30</span></label>
+                <label><input type="radio" name="time" value="12:30–1:00"><span>12:30–1:00</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-section">
+            <div class="form-title"><span>3</span><h3>Build your order</h3></div>
+            <div class="form-grid two">
+              <label>Lunch boxes *
+                <select name="quantity" id="quantity" required>
+                  <option value="1">1 lunch box</option><option value="2">2 lunch boxes</option><option value="3">3 lunch boxes</option><option value="4">4 lunch boxes</option><option value="5">5 lunch boxes</option><option value="6">6 lunch boxes</option>
+                </select>
+              </label>
+              <label>Special instructions<textarea name="instructions" rows="4" placeholder="Allergies, access details or notes"></textarea></label>
+            </div>
+            <fieldset>
+              <legend>Add extras</legend>
+              <div class="choice-grid extras">
+                <label><input type="checkbox" id="extraTaco" name="extraTaco"><span>Extra Taco Bite <b>+$5</b></span></label>
+                <label><input type="checkbox" id="extraBerry" name="extraBerry"><span>Extra Maple Berry Bite <b>+$5</b></span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-section">
+            <div class="form-title"><span>4</span><h3>Payment on delivery</h3></div>
+            <div class="payment-grid">
+              <label><input type="radio" name="payment" value="Square tap" required><span class="payment-symbol">▣</span><span><b>Square tap</b><small>Debit, credit, Apple Pay or Google Pay</small></span></label>
+              <label><input type="radio" name="payment" value="Cash"><span class="payment-symbol">$</span><span><b>Cash</b><small>Exact change appreciated</small></span></label>
+            </div>
+          </div>
+
+          <div class="order-summary" aria-live="polite">
+            <div><span>Delivery date</span><strong id="deliveryDate">Next Thursday</strong></div>
+            <div><span>Order total</span><strong id="total">$15</strong></div>
+          </div>
+
+          <label class="consent"><input type="checkbox" name="confirmation" required><span>I understand this order is not confirmed until I send the prepared email.</span></label>
+          <button type="submit" class="button submit-button">Prepare my order email <span aria-hidden="true">♡</span></button>
+          <p class="form-note">Your email app will open with the order addressed to <strong>kris@chelseaskitchen.ca</strong>. Review it and press Send.</p>
+          <div id="formMessage" class="form-message" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><img src="assets/logo.jpg" alt="Chelsea's Kitchen"><p>Delicious food & helping hands.</p></div>
+      <div><strong>Algonquin-owned</strong><p>Kitigan Zibi Anishinabeg<br>Ottawa, Ontario</p></div>
+      <div><strong>Questions?</strong><p><a href="mailto:kris@chelseaskitchen.ca">kris@chelseaskitchen.ca</a><br><a href="https://www.instagram.com/bannock.bites/">@bannock.bites</a></p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
