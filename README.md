@@ -1,26 +1,27 @@
-# Chelsea's Kitchen splash page
+# Chelsea's Kitchen Website
 
-This package is ready for GitHub Pages.
+Production-ready static homepage for GitHub Pages.
 
-## Files
+## Upload to GitHub
 
-- `index.html` — the webpage
-- `styles.css` — responsive styling
-- `assets/chelseas-kitchen-coming-soon.png` — splash artwork
-- `CNAME` — tells GitHub Pages to use `chelseaskitchen.ca`
+Upload these items to the root of the `ChelseasKitchen` repository:
 
-## Publish through GitHub Pages
+- `index.html`
+- `styles.css`
+- `script.js`
+- the full `assets` folder
 
-1. Create a new public GitHub repository.
-2. Upload all files and folders from this package.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose the `main` branch and `/ (root)`, then save.
-6. In GitHub Pages settings, confirm the custom domain is `chelseaskitchen.ca`.
-7. Update the DNS records in GoDaddy using the values GitHub provides.
+Commit the changes. GitHub Pages will publish the updated homepage at `chelseaskitchen.ca` after its normal deployment delay.
 
-The Instagram button links to:
-https://www.instagram.com/bannock.bites/
+## Important
 
-The email button links to:
-kris@chelseaskitchen.ca
+This package does not contain or link to the private Carleton lunch page.
+
+The contact form prepares an email to `kris@chelseaskitchen.ca`; GitHub Pages cannot store form submissions by itself.
+
+## Version 2 changes
+- Replaced the informal personal photo with a professional food-and-mobile-cart collage.
+- Updated typography to use Caveat Brush, Barlow Condensed, and Inter for a closer match to the approved visual reference.
+
+
+Updated menu naming: Reconciliation Taco Bite and Large Reconciliation Taco. The From Scratch section has been removed.

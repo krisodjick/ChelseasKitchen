@@ -3,63 +3,197 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chelsea's Kitchen Bannock Bites — website coming soon. Follow @bannock.bites on Instagram for pop-ups, menu updates, and more.">
-  <meta name="theme-color" content="#f6e8d4">
-
-  <meta property="og:title" content="Chelsea's Kitchen — Bannock Bites">
-  <meta property="og:description" content="Big flavour. Little bites. Follow our journey on Instagram.">
-  <meta property="og:image" content="assets/chelseas-kitchen-coming-soon.png">
-  <meta property="og:type" content="website">
-
-  <title>Chelsea's Kitchen | Bannock Bites</title>
+  <meta name="description" content="Chelsea's Kitchen is an Algonquin-owned food company rooted in Kitigan Zibi and serving Ottawa through mobile carts, catering and community events.">
+  <meta name="theme-color" content="#062f33">
+  <title>Chelsea's Kitchen | Food Starts Conversations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Caveat+Brush&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <main class="page">
-    <section class="splash" aria-labelledby="page-title">
-      <h1 id="page-title" class="sr-only">
-        Chelsea's Kitchen Bannock Bites — website coming soon
-      </h1>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <div class="artwork">
-        <img
-          src="assets/chelseas-kitchen-coming-soon.png"
-          alt="Chelsea's Kitchen Bannock Bites. Big flavour, little bites. Website coming soon. Follow @bannock.bites on Instagram. Every bite supports our community. Algonquin-owned, Kitigan Zibi Anishinabeg."
-          width="1536"
-          height="1024"
-        >
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="logo-link" href="#top" aria-label="Chelsea's Kitchen home">
+        <img src="assets/logo.webp" alt="Chelsea's Kitchen logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><b>Menu</b></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#mobile-cart">Mobile Cart</a>
+        <a href="#catering">Catering</a>
+        <a href="#events">Events</a>
+        <a href="#story">Our Story</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+      <a class="header-cta" href="#contact">Book Chelsea's Kitchen <span>→</span></a>
+    </div>
+  </header>
 
-        <!-- Clickable areas placed over the buttons printed in the artwork. -->
-        <a
-          class="hotspot instagram-hotspot"
-          href="https://www.instagram.com/bannock.bites/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Follow Bannock Bites on Instagram"
-        ></a>
-
-        <a
-          class="hotspot email-hotspot"
-          href="mailto:kris@chelseaskitchen.ca"
-          aria-label="Email Kris at Chelsea's Kitchen"
-        ></a>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-photo" role="img" aria-label="Reconciliation Taco served beside the water"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy reveal">
+        <p class="kicker">Indigenous-owned. Algonquin-made.</p>
+        <h1><span>Food Starts</span><em>Conversations.</em></h1>
+        <p class="hero-lead">Fresh handmade bannock. Bold flavours. A mobile kitchen rooted in Kitigan Zibi and serving Ottawa.</p>
+        <div class="hero-actions">
+          <a class="button button-coral" href="#mobile-cart">Meet the Mobile Cart <span>→</span></a>
+          <a class="button button-ghost" href="#story">Read Our Story <span>♡</span></a>
+        </div>
+        <p class="place-line"><span>⌖</span> From Kitigan Zibi Anishinabeg to Ottawa</p>
       </div>
+      <div class="hero-note">Made with care.<br>Served with purpose. <span>♡</span></div>
+      <a class="scroll-cue" href="#welcome" aria-label="Scroll to discover"><span></span></a>
+    </section>
 
-      <div class="mobile-actions" aria-label="Contact links">
-        <a
-          class="button button-primary"
-          href="https://www.instagram.com/bannock.bites/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Follow @bannock.bites
-        </a>
-        <a class="button button-secondary" href="mailto:kris@chelseaskitchen.ca">
-          Email us
-        </a>
+    <section class="welcome paper-section" id="welcome">
+      <div class="wrap welcome-grid">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Pull up a chair</p>
+          <h2>There is always room at our table.</h2>
+          <p>Chelsea's Kitchen is an Algonquin-owned food company built around one simple idea: good food gives people a reason to slow down, talk and connect.</p>
+        </div>
+        <div class="promise-grid reveal">
+          <article><span>01</span><h3>Made Fresh</h3><p>Small batches, handmade bannock and food prepared with care.</p></article>
+          <article><span>02</span><h3>Rooted Here</h3><p>Headquartered in Kitigan Zibi Anishinabeg and proudly serving Ottawa.</p></article>
+          <article><span>03</span><h3>Made to Gather</h3><p>Mobile carts, catering and events that turn meals into moments.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-feature" id="mobile-cart">
+      <div class="wrap feature-grid">
+        <div class="photo-stack reveal">
+          <figure class="photo-main"><img src="assets/cart-lakeside.jpg" alt="Chelsea's Kitchen mobile setup beside Dow's Lake"></figure>
+          <figure class="photo-small"><img src="assets/cart-team.jpg" alt="Chelsea's Kitchen serving Bannock Bites by the water"></figure>
+          <div class="tape tape-one"></div><div class="tape tape-two"></div>
+        </div>
+        <div class="feature-copy reveal">
+          <p class="eyebrow light">The Mobile Cart</p>
+          <h2>We bring the kitchen to where people gather.</h2>
+          <p>Our mobile cart serves festivals, markets, campuses, workplaces and community gatherings across Ottawa. It is compact, flexible and built to create a welcoming experience wherever it goes.</p>
+          <div class="feature-list">
+            <div><b>Fresh</b><span>Prepared before every service</span></div>
+            <div><b>Fast</b><span>Designed for busy events</span></div>
+            <div><b>Memorable</b><span>Food and a story people share</span></div>
+          </div>
+          <a class="button button-gold" href="#contact">Bring the Cart to Your Event <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="food-showcase paper-section">
+      <div class="wrap">
+        <div class="showcase-heading reveal">
+          <p class="eyebrow">What we make</p>
+          <h2>Bannock, reimagined.</h2>
+          <p>A focused menu. Big flavour. Food people remember.</p>
+        </div>
+        <div class="food-grid">
+          <article class="food-card reveal">
+            <div class="food-image"><img src="assets/hero-taco.jpg" alt="Reconciliation Taco"><span class="badge">Signature</span></div>
+            <div class="food-copy"><h3>Reconciliation Taco Bite</h3><p>Fresh baked bannock, savoury filling, crisp toppings and our garlic sauce.</p><strong>$5</strong></div>
+          </article>
+          <article class="food-card reveal">
+            <div class="food-image"><img src="assets/maple-berry.jpg" alt="Maple Berry Bite with Awazibi maple syrup"><span class="badge purple">Sweet</span></div>
+            <div class="food-copy"><h3>Maple Berry Bite</h3><p>Warm bannock, berries and Awazibi maple syrup. Simple, sweet and unforgettable.</p><strong>$5</strong></div>
+          </article>
+          <article class="food-card reveal">
+            <div class="food-image"><img src="assets/taco-close.jpg" alt="Lunch-sized bannock taco bowl"><span class="badge teal">Lunch</span></div>
+            <div class="food-copy"><h3>Large Reconciliation Taco</h3><p>A larger, hearty version made for campus lunches, workplaces and catered service.</p><strong>$12</strong></div>
+          </article>
+        </div>
+        <p class="quantity-note reveal">Planning for a group? Quantity and event pricing is available.</p>
+      </div>
+    </section>
+
+
+
+    <section class="catering paper-section" id="catering">
+      <div class="wrap catering-grid">
+        <div class="catering-image reveal"><img src="assets/taco-wide.jpg" alt="Fresh lunch-sized Bannock Bite"><span class="paper-label">Made for your table ♡</span></div>
+        <div class="catering-copy reveal">
+          <p class="eyebrow">Catering</p>
+          <h2>Food that gets the room talking.</h2>
+          <p>From an intimate team lunch to a large community gathering, Chelsea's Kitchen creates food service that feels warm, organized and distinctly different.</p>
+          <div class="catering-types"><span>Corporate lunches</span><span>Community gatherings</span><span>Universities</span><span>Conferences</span><span>Private events</span><span>Indigenous organizations</span></div>
+          <a class="button button-teal" href="#contact">Request Catering <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="wrap">
+        <div class="events-heading reveal"><p class="eyebrow light">Come find us</p><h2>Events & Pop-Ups</h2><p>Follow the cart, meet the team and try bannock made fresh.</p></div>
+        <div class="event-layout">
+          <article class="next-event reveal">
+            <img src="assets/event-serving.jpg" alt="Chelsea's Kitchen serving bannock samples at Dow's Lake">
+            <div class="event-card"><p>First official service</p><h3>August 1, 2026</h3><strong>Chelsea, Quebec</strong><span>More details will be shared soon.</span></div>
+          </article>
+          <div class="event-moments reveal">
+            <figure><img src="assets/free-snacks.jpg" alt="Sharing free Algonquin snacks in Ottawa"><figcaption>Sharing food on unceded Algonquin land.</figcaption></figure>
+            <figure><img src="assets/maple-cups.jpg" alt="Bannock samples with maple syrup"><figcaption>Real food. Real conversations.</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story paper-section" id="story">
+      <div class="wrap story-grid">
+        <div class="story-collage reveal" aria-label="Chelsea's Kitchen food and community">
+          <figure class="story-food"><img src="assets/hero-taco.jpg" alt="Chelsea's Kitchen Reconciliation Taco"></figure>
+          <figure class="story-community"><img src="assets/story-foreground.jpg" alt="Chelsea's Kitchen serving Bannock Bites beside Dow's Lake"></figure>
+          <span class="tape story-tape"></span>
+          <div class="story-note">Rooted in Kitigan Zibi.<br>Built to bring people together. <b>♡</b></div>
+        </div>
+        <div class="story-copy reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2>A family name. A community purpose. A business built for the future.</h2>
+          <p>Chelsea's Kitchen is named after my daughter. What started as bannock made to feed people became something larger: a way to build connection, represent Kitigan Zibi with pride and create a business rooted in hope.</p>
+          <p>We call our signature item a Reconciliation Taco because reconciliation does not only happen in institutions. Sometimes it begins when people who may never have spoken end up sharing food.</p>
+          <p class="story-signoff">Food starts conversations. That is enough for us to believe food matters.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="maple-feature">
+      <div class="wrap maple-grid">
+        <div class="maple-copy reveal"><p class="eyebrow light">Local ingredients</p><h2>Sweetened with Awazibi.</h2><p>Our Maple Berry Bites feature maple syrup made in Kitigan Zibi. It is not just an ingredient. It is part of where we come from.</p></div>
+        <figure class="maple-photo reveal"><img src="assets/awazibi-bottle.jpg" alt="Awazibi maple syrup from Kitigan Zibi"><figcaption>Made in Kitigan Zibi Anishinabeg</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="contact paper-section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact Us</p>
+          <h2>Let's put something good on the table.</h2>
+          <p>Tell us about your event, workplace, campus or community gathering. We will reply with availability and next steps.</p>
+          <div class="contact-details"><a href="mailto:kris@chelseaskitchen.ca">kris@chelseaskitchen.ca</a><span>Head Office: Kitigan Zibi Anishinabeg, Quebec</span><span>Mobile Cart Operations: Ottawa, Ontario</span></div>
+        </div>
+        <form id="contactForm" class="contact-form reveal">
+          <div class="field-row"><label>Your name<input name="name" required autocomplete="name"></label><label>Email<input type="email" name="email" required autocomplete="email"></label></div>
+          <label>What can we help with?<select name="interest" required><option value="">Choose one</option><option>Mobile cart booking</option><option>Catering</option><option>Event invitation</option><option>Partnership</option><option>General question</option></select></label>
+          <label>Tell us a little more<textarea name="message" rows="5" required placeholder="Date, location, number of guests and anything else we should know."></textarea></label>
+          <button class="button button-coral" type="submit">Prepare My Message <span>→</span></button>
+          <p class="form-note">This opens a prepared email to kris@chelseaskitchen.ca for you to review and send.</p>
+        </form>
       </div>
     </section>
   </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><img src="assets/logo.webp" alt="Chelsea's Kitchen"><p>Indigenous-owned.<br>Algonquin-made.<br>Made with purpose.</p></div>
+      <div><h3>Explore</h3><a href="#mobile-cart">Mobile Cart</a><a href="#catering">Catering</a><a href="#events">Events</a><a href="#story">Our Story</a></div>
+      <div><h3>Connect</h3><a href="mailto:kris@chelseaskitchen.ca">Email us</a><a href="https://www.instagram.com/bannock.bites/" target="_blank" rel="noopener">Instagram</a><p>Kitigan Zibi, Quebec<br>Serving Ottawa</p></div>
+      <div class="footer-invite"><p>Pull up a chair.</p><strong>There is always room at our table.</strong><a class="button button-coral" href="#contact">Say Hello <span>→</span></a></div>
+    </div>
+    <div class="footer-bottom"><div class="wrap"><span>© <span id="year"></span> Chelsea's Kitchen</span><span>Kitigan Zibi Anishinabeg</span></div></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
