@@ -17,3 +17,23 @@ h1,h2,h3,.place-line,.hero-note,.paper-label,.story-note,blockquote,figcaption,.
 @media(max-width:680px){.story-collage{min-height:500px}.story-food{width:88%;height:350px}.story-community{width:62%;height:220px}.story-note{right:0;bottom:188px;max-width:225px;font-size:20px}.story-copy h2{font-size:50px}}
 
 .story-note,.story-tape{display:none!important;}
+
+/* iPhone/mobile cleanup: remove scrapbook-style notes, tape and the collage that can render as long paper strips */
+@media (max-width: 680px) {
+  .hero-note,
+  .tape,
+  .paper-label,
+  .story-note,
+  .story-tape,
+  .story-collage {
+    display: none !important;
+  }
+
+  .story-grid {
+    display: block;
+  }
+
+  .story-copy {
+    width: 100%;
+  }
+}
