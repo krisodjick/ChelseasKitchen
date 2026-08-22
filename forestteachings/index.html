@@ -1,182 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#153f2f">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Forest Teachings Preorder | Chelsea's Kitchen</title>
-  <meta name="description" content="Preorder Chelsea's Kitchen for Forest Teachings with Albert Dumont on Tuesday, July 28, 2026.">
+  <meta name="description" content="Preorder lunch from Chelsea's Kitchen for the Forest Teachings Workshop with Albert Dumont on Saturday, August 29, 2026." />
   <style>
     :root{
-      --forest:#153f2f;
-      --deep:#0d2a20;
-      --leaf:#739b5b;
-      --cream:#fbf5e9;
-      --white:#fff;
-      --ink:#262622;
-      --muted:#716d64;
-      --coral:#db6d57;
-      --line:#e5ddcf;
-      --shadow:0 20px 55px rgba(13,42,32,.14);
-      --radius:28px;
+      --ink:#171714;
+      --muted:#68685f;
+      --cream:#f5f1e8;
+      --paper:#fffdf8;
+      --line:#d7d0c3;
+      --accent:#9b3f2c;
+      --accent-dark:#763022;
+      --green:#435743;
+      --shadow:0 18px 50px rgba(30,28,22,.10);
+      --radius:22px;
+      --max:1160px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      background:var(--cream);
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--paper);
       color:var(--ink);
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       line-height:1.55;
     }
-    img{display:block;max-width:100%}
+    img{display:block;width:100%}
     a{color:inherit}
-    .wrap{width:min(1120px,calc(100% - 30px));margin:auto}
-    .notice{
-      background:var(--deep);
+    .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+    .topbar{
+      background:var(--ink);
       color:#fff;
       text-align:center;
-      padding:10px 16px;
-      font-size:.9rem;
-      font-weight:800;
+      padding:9px 16px;
+      font-size:.85rem;
       letter-spacing:.03em;
     }
     header{
-      position:sticky;top:0;z-index:30;
-      background:rgba(251,245,233,.94);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(21,63,47,.08);
+      border-bottom:1px solid var(--line);
+      background:rgba(255,253,248,.96);
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(10px);
     }
-    nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{text-decoration:none;font-weight:950;font-size:1.05rem;letter-spacing:.01em}
-    .nav-btn,.btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      border-radius:999px;text-decoration:none;font-weight:900;
-      transition:.2s ease;
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
     }
-    .nav-btn{padding:12px 18px;background:var(--forest);color:#fff}
-    .btn{padding:15px 23px;background:var(--coral);color:#fff;border:0;cursor:pointer}
-    .nav-btn:hover,.btn:hover{transform:translateY(-2px)}
+    .brand{
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:1.3rem;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .nav a.button{
+      text-decoration:none;
+      border:1px solid var(--ink);
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.9rem;
+    }
     .hero{
-      color:#fff;
-      background:
-        linear-gradient(115deg,rgba(13,42,32,.96),rgba(21,63,47,.84)),
-        url("assets/reconciliation-taco-held.jpg") center/cover;
-      padding:82px 0 72px;
+      padding:62px 0 48px;
+      background:linear-gradient(180deg,#f5f1e8 0%,#fffdf8 100%);
     }
-    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:52px}
-    .eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;font-weight:950;color:#d6e9cd}
-    h1,h2{
-      font-family:Georgia,"Times New Roman",serif;
+    .eyebrow{
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-weight:800;
+      color:var(--accent);
+      margin-bottom:14px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:48px;
+      align-items:center;
+    }
+    h1,h2,h3{
+      font-family:Georgia, 'Times New Roman', serif;
+      line-height:1.05;
+      margin-top:0;
+    }
+    h1{
+      font-size:clamp(3rem,7vw,6.2rem);
       letter-spacing:-.045em;
-      margin:0;
+      margin-bottom:20px;
     }
-    h1{font-size:clamp(3.6rem,8vw,7rem);line-height:.88;margin:14px 0 20px}
-    h2{font-size:clamp(2.35rem,5vw,4.25rem);line-height:1.02}
-    .hero p{font-size:1.13rem;color:rgba(255,255,255,.88);max-width:650px}
-    .event-meta{display:flex;flex-wrap:wrap;gap:10px 20px;margin:26px 0 30px;font-weight:800}
-    .hero-card{
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.2);
-      border-radius:30px;
-      padding:16px;
-      box-shadow:0 28px 70px rgba(0,0,0,.26);
-      transform:rotate(1.2deg);
+    h2{
+      font-size:clamp(2.1rem,4vw,3.8rem);
+      letter-spacing:-.035em;
+      margin-bottom:14px;
     }
-    .hero-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:21px}
-    .hero-card p{font-size:.95rem;font-weight:850;margin:14px 8px 4px}
-    section{padding:76px 0}
-    .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:950;color:var(--leaf);margin-bottom:8px}
-    .lead{max-width:760px;color:var(--muted);font-size:1.08rem}
-    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:38px}
-    .card{
-      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-      overflow:hidden;box-shadow:var(--shadow);
+    h3{
+      font-size:1.55rem;
+      margin-bottom:8px;
     }
-    .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
-    .card-body{padding:25px}
-    .card h3{font-size:1.48rem;margin:0 0 8px}
-    .card p{color:var(--muted);margin:0}
-    .price{display:inline-block;margin-top:18px;font-size:1.35rem;font-weight:950;color:var(--forest)}
-    .lemonade{
-      min-height:100%;
-      display:flex;flex-direction:column;justify-content:space-between;
-      background:linear-gradient(145deg,#fff5ee,#fff8d8);
+    .hero p{
+      max-width:660px;
+      font-size:1.08rem;
+      color:#44443e;
     }
-    .lemonade img{
-      width:100%;
-      aspect-ratio:4/3;
+    .event-meta{
+      margin:26px 0;
+      display:grid;
+      gap:8px;
+      font-weight:700;
+    }
+    .cta{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      padding:14px 22px;
+      border-radius:999px;
+      border:0;
+      cursor:pointer;
+      font-size:1rem;
+    }
+    .cta:hover{background:var(--accent-dark)}
+    .hero-image{
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      min-height:520px;
+    }
+    .hero-image img{
+      height:100%;
+      min-height:520px;
       object-fit:cover;
     }
-    .combo{
-      margin-top:28px;
-      background:var(--forest);
+    section{padding:72px 0}
+    .section-intro{max-width:760px;margin-bottom:34px}
+    .section-intro p{font-size:1.05rem;color:var(--muted)}
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 8px 28px rgba(30,28,22,.05);
+    }
+    .card img{height:310px;object-fit:cover}
+    .card-body{padding:26px}
+    .price{
+      display:inline-block;
+      margin-bottom:12px;
+      font-weight:900;
+      font-size:1.1rem;
+      color:var(--accent);
+    }
+    .card p{color:var(--muted);margin-bottom:0}
+    .takehome{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:var(--green);
       color:#fff;
-      border-radius:26px;
-      padding:27px 30px;
-      display:flex;justify-content:space-between;align-items:center;gap:22px;
     }
-    .combo strong{font-size:1.55rem}
-    .combo p{margin:4px 0 0;color:rgba(255,255,255,.76)}
+    .takehome img{height:100%;min-height:390px;object-fit:cover}
+    .takehome-copy{padding:42px}
+    .takehome-copy .eyebrow{color:#f3c9b8}
+    .takehome-copy p{color:#eef2ec}
+    .takehome .price{color:#fff;font-size:1.35rem}
+    .drinks{
+      margin-top:24px;
+      padding:23px 26px;
+      border:1px dashed #9d9689;
+      border-radius:18px;
+      background:#faf7f1;
+    }
     .story{
-      background:#edf3e8;
-      border-top:1px solid #dfe9d8;
-      border-bottom:1px solid #dfe9d8;
+      background:var(--cream);
     }
-    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-    .story-photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
-    .story-photo img{width:100%;aspect-ratio:16/11;object-fit:cover}
-    .details{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-    .detail{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
-    .detail h3{margin:0 0 7px}.detail p{margin:0;color:var(--muted)}
-    .order{background:linear-gradient(180deg,#fff,#fffaf2)}
+    .story-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:44px;
+      align-items:center;
+    }
+    .story img{
+      border-radius:var(--radius);
+      min-height:430px;
+      object-fit:cover;
+      box-shadow:var(--shadow);
+    }
+    .details{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+    .detail{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:20px;
+    }
+    .detail strong{display:block;margin-bottom:6px}
+    .order{
+      background:#11110f;
+      color:#fff;
+    }
+    .order .section-intro p{color:#d2d2ca}
     form{
-      background:#fff;border:1px solid var(--line);border-radius:32px;
-      box-shadow:var(--shadow);padding:clamp(22px,5vw,44px);margin-top:34px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      background:#1c1c19;
+      border:1px solid #34342f;
+      border-radius:var(--radius);
+      padding:28px;
     }
-    .step{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:8px 0 30px}
-    .step+.step{border-top:1px solid var(--line);padding-top:30px}
-    .badge{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:#fff;font-weight:950}
-    .step h3{margin:2px 0 18px;font-size:1.28rem}
-    .fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .full{grid-column:1/-1}
-    label{display:block;font-size:.9rem;font-weight:850;margin-bottom:7px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field.full{grid-column:1/-1}
+    label{font-weight:700}
     input,select,textarea{
-      width:100%;border:1px solid #d9d1c6;border-radius:14px;padding:14px 15px;
-      font:inherit;background:#fff;color:var(--ink);outline:none;
+      width:100%;
+      border:1px solid #55554e;
+      background:#fffdf8;
+      color:#171714;
+      border-radius:12px;
+      padding:13px 14px;
+      font:inherit;
     }
-    input:focus,select:focus,textarea:focus{border-color:var(--leaf);box-shadow:0 0 0 4px rgba(115,155,91,.14)}
-    textarea{min-height:100px;resize:vertical}
-    .summary{background:#f1f6ed;border-radius:20px;padding:21px 23px;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}
-    .summary strong{font-size:1.5rem;color:var(--forest)}
-    .submit{width:100%;border:0;border-radius:999px;padding:17px;background:var(--coral);color:#fff;font-weight:950;font-size:1.04rem;cursor:pointer}
-    .fine{text-align:center;font-size:.84rem;color:var(--muted);margin:11px 0 0}
-    footer{background:var(--deep);color:#fff;padding:42px 0}
-    .foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .foot p{margin:4px 0;color:rgba(255,255,255,.72)}
-    @media(max-width:850px){
-      .hero-grid,.story-grid{grid-template-columns:1fr}
-      .menu-grid{grid-template-columns:1fr 1fr}
+    textarea{min-height:110px;resize:vertical}
+    .order-items{
+      grid-column:1/-1;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:4px;
+    }
+    .order-item{
+      border:1px solid #44443e;
+      border-radius:15px;
+      padding:16px;
+    }
+    .order-item label{display:block;margin-bottom:10px}
+    .review{
+      grid-column:1/-1;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      border-top:1px solid #3a3a35;
+      padding-top:22px;
+      margin-top:4px;
+    }
+    .total{
+      font-size:1.45rem;
+      font-weight:900;
+    }
+    .note{font-size:.9rem;color:#c7c7bf;margin-top:10px}
+    footer{
+      padding:42px 0;
+      background:#0c0c0b;
+      color:#d9d9d2;
+    }
+    footer strong{color:#fff}
+    @media (max-width:850px){
+      .hero-grid,.story-grid,.takehome{grid-template-columns:1fr}
+      .hero-image,.hero-image img{min-height:380px}
+      .menu-grid{grid-template-columns:1fr}
       .details{grid-template-columns:1fr}
+      .order-items{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+      .field.full,.order-items,.review{grid-column:1}
     }
-    @media(max-width:620px){
-      .menu-grid,.fields{grid-template-columns:1fr}
-      .full{grid-column:auto}
-      .step{grid-template-columns:1fr}
-      .combo,.summary,.foot{align-items:flex-start;flex-direction:column}
-      .brand span{display:none}
-      .hero{padding-top:58px}
+    @media (max-width:520px){
+      .wrap{width:min(var(--max),calc(100% - 24px))}
+      .nav{min-height:64px}
+      .nav a.button{display:none}
+      section{padding:54px 0}
+      .hero{padding-top:42px}
+      .card img{height:250px}
+      .takehome-copy{padding:28px}
+      form{padding:18px}
     }
   </style>
 </head>
 <body>
-  <div class="notice">Tuesday, July 28 · Limited quantities · Preorder for pickup before the event</div>
+
+  <div class="topbar">Saturday, August 29 · 12:00–3:00 PM · Limited quantities · Preorder your lunch</div>
 
   <header>
-    <nav class="wrap">
-      <a class="brand" href="https://chelseaskitchen.ca"><span>Chelsea's Kitchen</span></a>
-      <a class="nav-btn" href="#order">Reserve food</a>
-    </nav>
+    <div class="wrap nav">
+      <a class="brand" href="https://chelseaskitchen.ca/">Chelsea's Kitchen</a>
+      <a class="button" href="#order">Reserve food</a>
+    </div>
   </header>
 
   <main>
@@ -184,218 +313,176 @@
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">Forest Teachings with Albert Dumont</div>
-          <h1>Food for the gathering.</h1>
-          <p>
-            Chelsea's Kitchen is offering a small preorder menu for guests attending the Forest Teachings
-            film screening and art-making workshop.
-          </p>
+          <h1>Lunch for the gathering.</h1>
+          <p>Chelsea's Kitchen is offering a simple lunch preorder menu for guests attending the Forest Teachings Workshop with Albert Dumont.</p>
+
           <div class="event-meta">
-            <span>Tuesday, July 28, 2026</span>
-            <span>Pickup 6:00–6:25 PM</span>
-            <span>St. Joseph's Church</span>
+            <span>Saturday, August 29, 2026</span>
+            <span>12:00–3:00 PM</span>
+            <span>St. Andrew's Presbyterian Church · 82 Kent Street, Ottawa</span>
           </div>
-          <a class="btn" href="#order">Place a preorder</a>
+
+          <a class="cta" href="#order">Place a preorder</a>
         </div>
-        <div class="hero-card">
-          <img src="assets/reconciliation-taco-portrait.jpg" alt="Chelsea's Kitchen Reconciliation Taco">
-          <p>Fresh food prepared by an Algonquin-owned small business.</p>
+
+        <div class="hero-image">
+          <img src="https://chelseaskitchen.ca/forestteachings/assets/reconciliation-taco-portrait.jpg" alt="Chelsea's Kitchen Reconciliation Taco">
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="menu">
       <div class="wrap">
-        <div class="kicker">Forest Teachings preorder menu</div>
-        <h2>Simple, fresh and ready before the evening begins.</h2>
-        <p class="lead">
-          Preorder individual items or choose the complete Forest Teachings Combo and save $2.
-        </p>
+        <div class="section-intro">
+          <div class="eyebrow">Forest Teachings lunch menu</div>
+          <h2>Two lunch sizes. Simple.</h2>
+          <p>Choose the lunch that fits your appetite. Both include a Reconciliation Taco and Maple Berry Bite. Cold drinks will be available for purchase on site.</p>
+        </div>
 
         <div class="menu-grid">
           <article class="card">
-            <img src="assets/reconciliation-taco-wide.jpg" alt="Reconciliation Taco with baked bannock, vegetarian chili and fresh toppings">
+            <img src="https://chelseaskitchen.ca/forestteachings/assets/reconciliation-taco-wide.jpg" alt="Reconciliation Taco with baked bannock and fresh toppings">
             <div class="card-body">
-              <h3>Reconciliation Taco</h3>
-              <p>Fresh baked bannock topped with vegetarian chili, black beans, cheese, lettuce and ranch.</p>
-              <span class="price">$10</span>
+              <span class="price">$10 Lunch</span>
+              <h3>Reconciliation Taco + Maple Berry Bite</h3>
+              <p>A smaller lunch package with our baked bannock taco and a sweet Maple Berry Bite for dessert.</p>
             </div>
           </article>
 
           <article class="card">
-            <img src="assets/maple-berry-bite.jpg" alt="Maple Berry Bite with baked bannock, berries and Awazibi maple syrup">
+            <img src="https://chelseaskitchen.ca/forestteachings/assets/maple-berry-bite.jpg" alt="Maple Berry Bite made with baked bannock, berries and maple syrup">
             <div class="card-body">
-              <h3>Maple Berry Bite</h3>
-              <p>Fresh baked bannock topped with berries and Awazibi maple syrup.</p>
-              <span class="price">$5</span>
-            </div>
-          </article>
-
-          <article class="card lemonade">
-            <img src="assets/lemons-strawberries.png" alt="Fresh lemons and strawberries for Strawberry Lemonade">
-            <div class="card-body">
-              <h3>Strawberry Lemonade</h3>
-              <p>Fresh homemade lemonade infused with strawberries and lightly sweetened with maple.</p>
-              <span class="price">$5</span>
+              <span class="price">$15 Lunch</span>
+              <h3>Large Reconciliation Taco + Maple Berry Bite</h3>
+              <p>Come hungry. Our larger Reconciliation Taco served with a Maple Berry Bite for dessert.</p>
             </div>
           </article>
         </div>
 
-        <div class="combo">
-          <div>
-            <strong>Forest Teachings Combo · $18</strong>
-            <p>Reconciliation Taco + Maple Berry Bite + Strawberry Lemonade</p>
+        <div class="takehome">
+          <img src="https://chelseaskitchen.ca/forestteachings/assets/reconciliation-taco-held.jpg" alt="Chelsea's Kitchen Reconciliation Taco">
+          <div class="takehome-copy">
+            <div class="eyebrow">Take some home</div>
+            <span class="price">$15 Take-Home Taco Kit</span>
+            <h2>Lunch now. Dinner later.</h2>
+            <p>Take home a packaged, refrigerated Reconciliation Taco Kit ready to prepare when you're hungry. Perfect for dinner later or to bring home for someone who couldn't make it to the gathering.</p>
+            <p><strong>Keep refrigerated. Simple preparation instructions included.</strong></p>
           </div>
-          <a class="btn" href="#order">Choose the combo</a>
+        </div>
+
+        <div class="drinks">
+          <strong>Drinks available on site.</strong>
+          Cold drinks will be available for purchase during the event. No need to preorder them.
         </div>
       </div>
     </section>
 
     <section class="story">
       <div class="wrap story-grid">
-        <div class="story-photo">
-          <img src="assets/reconciliation-taco-held.jpg" alt="A Reconciliation Taco from Chelsea's Kitchen">
+        <div>
+          <img src="https://chelseaskitchen.ca/forestteachings/assets/reconciliation-taco-portrait.jpg" alt="Reconciliation Taco from Chelsea's Kitchen">
         </div>
         <div>
-          <div class="kicker">Chelsea's Kitchen</div>
+          <div class="eyebrow">Chelsea's Kitchen</div>
           <h2>Food, family and community.</h2>
-          <p class="lead">
-            Chelsea's Kitchen is an Algonquin-owned food business from Kitigan Zibi Anishinabeg.
-            It is built around good food, family, community and giving back.
-          </p>
-          <p>
-            This preorder is being offered specifically for guests attending Forest Teachings with Albert Dumont.
-            Meals will be prepared in limited quantities and organized for quick pickup before the workshop.
-          </p>
-          <strong>Miigwech for supporting Chelsea's Kitchen.</strong>
-        </div>
-      </div>
+          <p>Chelsea's Kitchen is an Algonquin-owned food business from Kitigan Zibi Anishinabeg. It is built around good food, family, community and giving back.</p>
+          <p>This preorder is being offered specifically for guests attending Forest Teachings with Albert Dumont. Meals will be prepared in limited quantities and organized for easy pickup during the workshop.</p>
+          <p><strong>Miigwech for supporting Chelsea's Kitchen.</strong></p>
 
-      <div class="wrap details">
-        <div class="detail">
-          <h3>Pickup location</h3>
-          <p>St. Joseph's Church, 174 Wilbrod Street, Ottawa.</p>
-        </div>
-        <div class="detail">
-          <h3>Pickup window</h3>
-          <p>Tuesday, July 28 from 6:00–6:25 PM.</p>
-        </div>
-        <div class="detail">
-          <h3>Pay at pickup</h3>
-          <p>Square tap or cash. Exact change is appreciated.</p>
+          <div class="details">
+            <div class="detail">
+              <strong>Event location</strong>
+              St. Andrew's Presbyterian Church<br>82 Kent Street, Ottawa
+            </div>
+            <div class="detail">
+              <strong>Event time</strong>
+              Saturday, August 29<br>12:00–3:00 PM
+            </div>
+            <div class="detail">
+              <strong>Payment</strong>
+              Pay at the event<br>Square tap or cash
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="order" id="order">
       <div class="wrap">
-        <div class="kicker">Reserve your food</div>
-        <h2>Place your preorder.</h2>
-        <p class="lead">
-          No prepayment is required. Complete the form and your email app will open with the order ready to send.
-        </p>
+        <div class="section-intro">
+          <div class="eyebrow">Reserve your food</div>
+          <h2>Place your preorder.</h2>
+          <p>No prepayment is required. Complete the form and your email app will open with your order ready to send.</p>
+        </div>
 
-        <form id="orderForm">
-          <div class="step">
-            <div class="badge">1</div>
-            <div>
-              <h3>Your information</h3>
-              <div class="fields">
-                <div>
-                  <label for="name">Full name *</label>
-                  <input id="name" required autocomplete="name">
-                </div>
-                <div>
-                  <label for="email">Email *</label>
-                  <input id="email" type="email" required autocomplete="email">
-                </div>
-                <div>
-                  <label for="phone">Phone number *</label>
-                  <input id="phone" type="tel" required autocomplete="tel">
-                </div>
-                <div>
-                  <label for="pickup">Pickup time *</label>
-                  <select id="pickup" required>
-                    <option value="">Choose a pickup time</option>
-                    <option>6:00 PM</option>
-                    <option>6:10 PM</option>
-                    <option>6:20 PM</option>
-                  </select>
-                </div>
-              </div>
+        <form id="preorderForm">
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input id="name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number *</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+
+          <div class="field">
+            <label for="payment">Payment method *</label>
+            <select id="payment" name="payment" required>
+              <option value="">Choose one</option>
+              <option>Square tap</option>
+              <option>Cash</option>
+            </select>
+          </div>
+
+          <div class="order-items">
+            <div class="order-item">
+              <label for="lunch10">$10 Lunch</label>
+              <div>Reconciliation Taco + Maple Berry Bite</div>
+              <select id="lunch10" name="lunch10">
+                <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+              </select>
+            </div>
+
+            <div class="order-item">
+              <label for="lunch15">$15 Lunch</label>
+              <div>Large Reconciliation Taco + Maple Berry Bite</div>
+              <select id="lunch15" name="lunch15">
+                <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+              </select>
+            </div>
+
+            <div class="order-item">
+              <label for="kit15">$15 Take-Home Taco Kit</label>
+              <div>Packaged and refrigerated</div>
+              <select id="kit15" name="kit15">
+                <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+              </select>
             </div>
           </div>
 
-          <div class="step">
-            <div class="badge">2</div>
-            <div>
-              <h3>Your order</h3>
-              <div class="fields">
-                <div>
-                  <label for="tacos">Reconciliation Tacos · $10</label>
-                  <select id="tacos">
-                    <option value="0">None</option>
-                    <option value="1">1 taco</option><option value="2">2 tacos</option>
-                    <option value="3">3 tacos</option><option value="4">4 tacos</option>
-                    <option value="5">5 tacos</option><option value="6">6 tacos</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="berries">Maple Berry Bites · $5</label>
-                  <select id="berries">
-                    <option value="0">None</option>
-                    <option value="1">1 berry bite</option><option value="2">2 berry bites</option>
-                    <option value="3">3 berry bites</option><option value="4">4 berry bites</option>
-                    <option value="5">5 berry bites</option><option value="6">6 berry bites</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="lemonades">Strawberry Lemonades · $5</label>
-                  <select id="lemonades">
-                    <option value="0">None</option>
-                    <option value="1">1 lemonade</option><option value="2">2 lemonades</option>
-                    <option value="3">3 lemonades</option><option value="4">4 lemonades</option>
-                    <option value="5">5 lemonades</option><option value="6">6 lemonades</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="combos">Forest Teachings Combos · $18</label>
-                  <select id="combos">
-                    <option value="0">None</option>
-                    <option value="1">1 combo</option><option value="2">2 combos</option>
-                    <option value="3">3 combos</option><option value="4">4 combos</option>
-                    <option value="5">5 combos</option><option value="6">6 combos</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="payment">Payment method *</label>
-                  <select id="payment" required>
-                    <option value="">Choose payment</option>
-                    <option>Square tap</option>
-                    <option>Cash</option>
-                  </select>
-                </div>
-                <div class="full">
-                  <label for="notes">Allergies or special instructions</label>
-                  <textarea id="notes" placeholder="Please include anything we should know."></textarea>
-                </div>
-              </div>
-            </div>
+          <div class="field full">
+            <label for="notes">Allergies or special instructions</label>
+            <textarea id="notes" name="notes"></textarea>
           </div>
 
-          <div class="step">
-            <div class="badge">3</div>
+          <div class="review">
             <div>
-              <h3>Review and send</h3>
-              <div class="summary">
-                <span>Estimated order total</span>
-                <strong id="total">$0</strong>
-              </div>
-              <button class="submit" type="submit">Prepare my preorder email</button>
-              <p class="fine">
-                Your email app will open with the order addressed to kris@chelseaskitchen.ca.
-                Review it and press Send to complete your preorder.
-              </p>
+              <div class="total">Estimated order total: <span id="total">$0</span></div>
+              <div class="note">Your email app will open with the preorder addressed to kris@chelseaskitchen.ca. Review it and press Send to complete your preorder.</div>
             </div>
+            <button class="cta" type="submit">Prepare my preorder email</button>
           </div>
         </form>
       </div>
@@ -403,68 +490,69 @@
   </main>
 
   <footer>
-    <div class="wrap foot">
-      <div>
-        <strong>Chelsea's Kitchen</strong>
-        <p>Delicious food and helping hands.</p>
-      </div>
-      <div>
-        <p>Algonquin-owned · Kitigan Zibi Anishinabeg</p>
-        <p>kris@chelseaskitchen.ca · @bannock.bites</p>
-      </div>
+    <div class="wrap">
+      <strong>Chelsea's Kitchen</strong><br>
+      Delicious food and helping hands.<br><br>
+      Algonquin-owned · Kitigan Zibi Anishinabeg<br>
+      kris@chelseaskitchen.ca · @bannock.bites
     </div>
   </footer>
 
   <script>
-    const ids = ["tacos","berries","lemonades","combos"];
-    const prices = {tacos:10,berries:5,lemonades:5,combos:18};
+    const $ = id => document.getElementById(id);
+    const qtyFields = [
+      {id:'lunch10', price:10},
+      {id:'lunch15', price:15},
+      {id:'kit15', price:15}
+    ];
 
-    function totalOrder(){
-      const amount = ids.reduce((sum,id)=>sum+(Number(document.getElementById(id).value)*prices[id]),0);
-      document.getElementById("total").textContent = `$${amount}`;
-      return amount;
+    function calculateTotal(){
+      const total = qtyFields.reduce((sum,item) => sum + (parseInt($(item.id).value || 0,10) * item.price),0);
+      $('total').textContent = '$' + total.toFixed(0);
+      return total;
     }
 
-    ids.forEach(id=>document.getElementById(id).addEventListener("change",totalOrder));
+    qtyFields.forEach(item => $(item.id).addEventListener('change', calculateTotal));
 
-    document.getElementById("orderForm").addEventListener("submit",function(e){
+    $('preorderForm').addEventListener('submit', function(e){
       e.preventDefault();
-      if(!this.reportValidity()) return;
 
-      const amount = totalOrder();
-      if(amount===0){
-        alert("Please select at least one item.");
+      const q10 = parseInt($('lunch10').value || 0,10);
+      const q15 = parseInt($('lunch15').value || 0,10);
+      const qkit = parseInt($('kit15').value || 0,10);
+      if(q10 + q15 + qkit === 0){
+        alert('Please choose at least one lunch or take-home kit.');
         return;
       }
 
-      const name = document.getElementById("name").value;
-      const body = [
-        "FOREST TEACHINGS PREORDER",
-        "",
-        `Name: ${name}`,
-        `Email: ${document.getElementById("email").value}`,
-        `Phone: ${document.getElementById("phone").value}`,
-        `Pickup time: ${document.getElementById("pickup").value}`,
-        "",
-        `Reconciliation Tacos: ${document.getElementById("tacos").value} x $10`,
-        `Maple Berry Bites: ${document.getElementById("berries").value} x $5`,
-        `Strawberry Lemonades: ${document.getElementById("lemonades").value} x $5`,
-        `Forest Teachings Combos: ${document.getElementById("combos").value} x $18`,
-        `Estimated total: $${amount}`,
-        `Payment: ${document.getElementById("payment").value}`,
-        "",
-        "Allergies / instructions:",
-        document.getElementById("notes").value || "None",
-        "",
-        "Pickup: Tuesday, July 28, 2026 at St. Joseph's Church",
-        "",
-        "Miigwech!"
-      ].join("\n");
+      const total = calculateTotal();
+      const subject = encodeURIComponent('Forest Teachings Preorder - ' + $('name').value);
+      const body = encodeURIComponent(
+`FOREST TEACHINGS PREORDER
+Saturday, August 29, 2026
 
-      window.location.href = `mailto:kris@chelseaskitchen.ca?subject=${encodeURIComponent("Forest Teachings preorder - "+name)}&body=${encodeURIComponent(body)}`;
+Name: ${$('name').value}
+Email: ${$('email').value}
+Phone: ${$('phone').value}
+
+ORDER
+$10 Lunch x ${q10}
+$15 Lunch x ${q15}
+$15 Take-Home Taco Kit x ${qkit}
+
+Estimated total: $${total.toFixed(0)}
+Payment method: ${$('payment').value}
+
+Allergies / special instructions:
+${$('notes').value || 'None'}
+
+Please confirm this preorder. Miigwech!`
+      );
+
+      window.location.href = `mailto:kris@chelseaskitchen.ca?subject=${subject}&body=${body}`;
     });
 
-    totalOrder();
+    calculateTotal();
   </script>
 </body>
 </html>
