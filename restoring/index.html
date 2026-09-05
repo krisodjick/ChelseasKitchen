@@ -1,1 +1,495 @@
-xxx
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restoring Algonquin Presence | Project One</title>
+  <meta name="description" content="Restoring Algonquin Presence is a practical project to create visible Algonquin economic presence in Ottawa through four professionally built mobile vending carts.">
+  <style>
+    :root{
+      --paper:#ead4ad;
+      --paper2:#f3e4c6;
+      --ink:#1f1c18;
+      --teal:#0f4f55;
+      --teal2:#0a383d;
+      --rust:#9f3c20;
+      --wine:#6f1f17;
+      --gold:#c6893f;
+      --line:rgba(31,28,24,.24);
+      --shadow:0 18px 50px rgba(42,29,15,.18);
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,255,255,.38), transparent 30%),
+        radial-gradient(circle at 85% 45%, rgba(133,73,24,.08), transparent 28%),
+        linear-gradient(180deg,var(--paper2),var(--paper));
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.55;
+    }
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      opacity:.17;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(71,45,21,.04) 0 1px, transparent 1px 4px);
+      z-index:20;
+      mix-blend-mode:multiply;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      font-weight:900;
+      color:var(--rust);
+    }
+    h1,h2,h3,.display{
+      margin:0;
+      font-family:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.018em;
+      line-height:.92;
+    }
+    h1{font-size:clamp(4rem,11vw,9rem);max-width:1000px}
+    h2{font-size:clamp(3.1rem,7vw,6.8rem)}
+    h3{font-size:clamp(1.7rem,3vw,2.8rem);line-height:1}
+    .script{
+      font-family:Georgia, "Times New Roman", serif;
+      font-style:italic;
+      font-weight:700;
+      color:var(--wine);
+    }
+    p{font-size:1.06rem}
+    .lead{font-size:clamp(1.2rem,2.2vw,1.65rem);max-width:850px}
+    .big-copy{font-size:clamp(1.5rem,2.5vw,2.3rem);line-height:1.3;font-weight:800}
+    .teal{color:var(--teal)}
+    .rust{color:var(--rust)}
+
+    .topbar{
+      position:sticky; top:0; z-index:30;
+      background:rgba(20,47,48,.94);
+      color:#fff;
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .nav{
+      min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+    .brand{font-weight:950;letter-spacing:.04em}
+    .navlinks{display:flex;gap:18px;align-items:center;font-size:.9rem}
+    .navlinks a{text-decoration:none;opacity:.88}
+    .navlinks a:hover{opacity:1}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      text-decoration:none;font-weight:900;
+      padding:.9rem 1.1rem;border-radius:999px;border:1px solid transparent;
+      transition:.2s ease;cursor:pointer;
+    }
+    .btn-primary{background:var(--rust);color:white}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(111,31,23,.23)}
+    .btn-ghost{border-color:rgba(255,255,255,.45);color:white}
+    .btn-dark{background:var(--teal2);color:#fff}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+
+    .hero{
+      min-height:calc(100vh - 64px);
+      display:flex;align-items:center;
+      position:relative;overflow:hidden;
+      border-bottom:1px solid var(--line);
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.18fr .82fr;gap:50px;align-items:center;
+      padding:70px 0 60px;
+    }
+    .hero h1 .second{color:var(--teal)}
+    .hero .script{font-size:clamp(1.7rem,4vw,3.8rem);display:block;margin:22px 0 24px}
+    .hero-card{
+      position:relative;
+      border:1px solid rgba(59,37,16,.35);
+      background:#d8bc8c;
+      padding:10px;
+      box-shadow:var(--shadow);
+      transform:rotate(1.2deg);
+    }
+    .hero-card img{aspect-ratio:2/3;object-fit:cover}
+    .hero-stamp{
+      display:inline-flex;margin-top:26px;
+      padding:.55rem .85rem;border:2px solid var(--rust);
+      color:var(--rust);font-weight:950;text-transform:uppercase;letter-spacing:.08em;
+      transform:rotate(-2deg);
+    }
+
+    .divider{
+      height:18px;
+      background:
+        linear-gradient(90deg, transparent 0 8%, var(--rust) 8% 9%, transparent 9% 10%, var(--teal) 10% 11%, transparent 11% 12%,
+        var(--wine) 12% 13%, transparent 13% 87%, var(--wine) 87% 88%, transparent 88% 89%, var(--teal) 89% 90%, transparent 90% 91%, var(--rust) 91% 92%, transparent 92%);
+      opacity:.7;
+      max-width:760px;margin:28px 0;
+    }
+
+    section{padding:100px 0}
+    .section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:end;margin-bottom:52px}
+    .section-head p{margin:0;max-width:760px}
+    .quote{
+      padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin-top:40px;
+    }
+
+    .solution{
+      background:rgba(255,255,255,.18);
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    }
+    .solution-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+    .poster-frame{
+      background:#e3c99d;border:1px solid rgba(64,42,21,.28);padding:8px;box-shadow:var(--shadow)
+    }
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .feature{
+      padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.18);
+      border-radius:18px;
+    }
+    .feature span{
+      display:inline-flex;width:42px;height:42px;border-radius:50%;
+      align-items:center;justify-content:center;background:var(--teal);color:#fff;font-weight:900;margin-bottom:15px
+    }
+    .feature p{font-size:.96rem;margin-bottom:0}
+
+    .location-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .location{
+      background:rgba(255,255,255,.2);
+      border:1px solid var(--line);
+      min-height:270px;
+      border-radius:18px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;
+      position:relative;overflow:hidden;
+    }
+    .location:after{
+      content:"";position:absolute;inset:auto -30px -50px auto;width:150px;height:150px;border-radius:50%;
+      background:rgba(15,79,85,.08)
+    }
+    .num{font-size:2.4rem;font-weight:950;color:var(--rust)}
+    .location small{font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+    .model{
+      background:var(--teal2);color:white;position:relative;overflow:hidden;
+    }
+    .model:before{
+      content:"";position:absolute;inset:0;opacity:.08;
+      background-image:radial-gradient(circle at 20% 20%, #fff 0 1px, transparent 1.5px);
+      background-size:24px 24px;
+    }
+    .model .wrap{position:relative}
+    .model .script{color:#f0c291}
+    .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+    .model-card{
+      padding:28px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);
+      border-radius:20px;
+    }
+    .model-card strong{font-size:1.15rem;color:#f3cf95}
+    .model-card p{color:rgba(255,255,255,.82)}
+
+    .timeline{position:relative;margin-top:46px}
+    .step{
+      display:grid;grid-template-columns:110px 1fr;gap:28px;padding:32px 0;border-top:1px solid var(--line)
+    }
+    .step:last-child{border-bottom:1px solid var(--line)}
+    .step-num{
+      width:76px;height:76px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+      background:var(--rust);color:white;font-size:1.7rem;font-weight:950
+    }
+    .checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px;margin:20px 0 0;padding:0;list-style:none}
+    .checklist li:before{content:"✓";font-weight:950;color:var(--teal);margin-right:10px}
+
+    .statement{
+      background:var(--wine);color:white;text-align:center;padding:80px 0;
+    }
+    .statement h2{font-size:clamp(3.2rem,8vw,7.6rem)}
+    .statement .script{color:#f0cf98;font-size:clamp(1.8rem,4vw,3.6rem);margin-top:18px;display:block}
+
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
+    .metric{border-top:4px solid var(--teal);padding-top:18px}
+    .metric b{font-size:clamp(2.5rem,5vw,5rem);font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;color:var(--teal)}
+    .metric span{display:block;font-weight:800}
+
+    .partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+    .partner-card{padding:24px;border-radius:18px;background:rgba(255,255,255,.2);border:1px solid var(--line)}
+    .partner-card h3{font-size:1.45rem;margin-bottom:12px;color:var(--teal)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .about-panel{
+      padding:32px;border-left:6px solid var(--rust);background:rgba(255,255,255,.2)
+    }
+
+    footer{
+      background:#1d2828;color:#fff;padding:58px 0 36px
+    }
+    footer .display{font-size:clamp(2.2rem,5vw,5rem)}
+    footer .script{color:#f0c291;font-size:clamp(1.6rem,3vw,2.8rem)}
+    .footer-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+    .contact a{display:block;margin:.35rem 0;color:#fff}
+    .fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:.8rem;opacity:.7}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:.7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media (max-width:900px){
+      .navlinks a:not(.btn){display:none}
+      .hero-grid,.section-head,.solution-grid,.about-grid,.footer-grid{grid-template-columns:1fr}
+      .hero{min-height:auto}
+      .hero-card{max-width:570px;margin:10px auto 0}
+      .location-grid,.metrics,.partner-grid{grid-template-columns:repeat(2,1fr)}
+      .feature-grid,.model-grid{grid-template-columns:1fr}
+      .section-head{gap:20px}
+      section{padding:78px 0}
+    }
+    @media (max-width:560px){
+      .wrap{width:min(var(--max),calc(100% - 24px))}
+      .hero-grid{padding-top:45px}
+      .hero-card{transform:none}
+      .location-grid,.metrics,.partner-grid{grid-template-columns:1fr}
+      .step{grid-template-columns:68px 1fr;gap:16px}
+      .step-num{width:56px;height:56px;font-size:1.2rem}
+      .checklist{grid-template-columns:1fr}
+      .btn{width:100%}
+      .actions{display:grid;grid-template-columns:1fr}
+      h1{font-size:clamp(3.4rem,18vw,5.6rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">RESTORING ALGONQUIN PRESENCE</div>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#project">Project</a>
+        <a href="#locations">Locations</a>
+        <a href="#model">Model</a>
+        <a href="#how">How</a>
+        <a class="btn btn-primary" href="#partner">Become a Partner</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Project One • Ottawa • Spring 2027</div>
+          <h1>Restoring <span class="second">Algonquin Presence</span></h1>
+          <span class="script">From Acknowledgement to Presence</span>
+          <p class="lead">
+            Ottawa acknowledges every day that it sits on the unceded and unsurrendered territory of the Algonquin Anishinaabe Nation.
+            We want to turn some of that acknowledgement into something people can actually see.
+          </p>
+          <div class="divider"></div>
+          <p class="big-copy"><span class="rust">Four carts.</span> Four spaces. <span class="teal">One Algonquin presence.</span></p>
+          <div class="actions">
+            <a class="btn btn-dark" href="#project">See the Project ↓</a>
+            <a class="btn btn-primary" href="#partner">Become a Partner</a>
+          </div>
+          <div class="hero-stamp">Ottawa • Spring 2027</div>
+        </div>
+        <div class="hero-card reveal">
+          <img src="restoring-presence-poster.jpg" alt="Restoring Algonquin Presence project poster">
+        </div>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Why this project exists</div>
+            <h2>Ottawa acknowledges Algonquin territory every day.</h2>
+          </div>
+          <div>
+            <p class="lead">Land acknowledgements are spoken before meetings, at universities, inside government buildings and at major public events. But acknowledgement and presence are not the same thing.</p>
+          </div>
+        </div>
+        <div class="quote reveal">
+          <p class="big-copy">
+            Walk through the ByWard Market. Lansdowne. Sparks Street. Ottawa's festivals and major tourism spaces.
+            There are remarkably few permanent places where Algonquin people are visibly working, selling, creating and participating in the economy of our own traditional territory.
+          </p>
+        </div>
+        <p class="big-copy rust reveal" style="margin-top:38px;">Restoring Algonquin Presence is about changing that.</p>
+      </div>
+    </section>
+
+    <section class="solution">
+      <div class="wrap solution-grid">
+        <div class="poster-frame reveal">
+          <img src="four-cart-project.jpg" alt="Four Cart Project poster">
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">Project One</div>
+          <h2>Four Algonquin Carts</h2>
+          <p class="lead">By Spring 2027, the goal is to have four professionally built mobile vending carts ready to operate in four highly visible locations across Ottawa.</p>
+          <div class="feature-grid">
+            <div class="feature"><span>01</span><h3>Infrastructure</h3><p>Professionally constructed and equipped mobile vending carts.</p></div>
+            <div class="feature"><span>02</span><h3>Opportunity</h3><p>Space for Kitigan Zibi entrepreneurs to test ideas, sell products and build businesses.</p></div>
+            <div class="feature"><span>03</span><h3>Presence</h3><p>Algonquin-owned businesses operating visibly in places visited by residents, workers and tourists.</p></div>
+          </div>
+          <p class="big-copy teal" style="margin-top:34px;">The carts are only the beginning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="locations">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">Where it begins</div><h2>Four Proposed Locations</h2></div>
+          <p class="lead">The specific sites will be developed through partnerships with the organizations responsible for these spaces. These are the four places we believe can create the strongest combination of visibility, tourism, community and economic opportunity.</p>
+        </div>
+        <div class="location-grid">
+          <article class="location reveal"><div class="num">01</div><div><h3>ByWard Market</h3><small>Tourism • Downtown • Year-round visibility</small></div></article>
+          <article class="location reveal"><div class="num">02</div><div><h3>Lansdowne</h3><small>Events • Community • Heavy pedestrian traffic</small></div></article>
+          <article class="location reveal"><div class="num">03</div><div><h3>Confederation Park</h3><small>National events • Tourism • Central Ottawa</small></div></article>
+          <article class="location reveal"><div class="num">04</div><div><h3>Sparks Street</h3><small>Parliament • Tourism • Downtown pedestrian traffic</small></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="model" class="model">
+      <div class="wrap">
+        <div class="eyebrow" style="color:#f0c291">Who this is built for</div>
+        <h2>Built for Kitigan Zibi</h2>
+        <span class="script">The infrastructure comes first. Opportunity follows.</span>
+        <div class="model-grid">
+          <div class="model-card reveal"><strong>Friday–Sunday</strong><h3 style="margin-top:10px">Establish the locations</h3><p>Chelsea's Kitchen / Bannock Bites operates the sites during the initial establishment period, generating revenue, proving the model and building customer traffic.</p></div>
+          <div class="model-card reveal"><strong>Monday–Thursday</strong><h3 style="margin-top:10px">Open the opportunity</h3><p>Available cart days can create opportunities for other Kitigan Zibi members to test products, concepts and businesses without first having to build their own vending infrastructure.</p></div>
+          <div class="model-card reveal"><strong>Long term</strong><h3 style="margin-top:10px">Build something sustainable</h3><p>Develop a fair system where Algonquin-owned businesses can occupy highly visible economic space across Ottawa and use that visibility to grow.</p></div>
+        </div>
+        <p class="big-copy reveal" style="margin-top:46px;max-width:900px">
+          The goal isn't simply to build carts. It is to lower one of the biggest barriers to entrepreneurship:
+          <span style="color:#f0c291">having somewhere affordable, equipped and visible to begin.</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">How we make it happen</div><h2>We build the opportunity first.</h2></div>
+          <p class="lead">Four carts do not begin with City Hall. The project becomes stronger if Ottawa is approached with funded infrastructure, committed partners and a working operating model already in place.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="step reveal"><div class="step-num">01</div><div><h3>Build the Partnerships</h3><p>Bring together businesses, organizations, Algonquin community members and supporters who believe in creating real Algonquin economic presence in Ottawa.</p></div></div>
+          <div class="step reveal"><div class="step-num" style="background:var(--teal)">02</div><div><h3>Fund & Build Four Carts</h3><p>Secure sponsorship, funding and construction partners to professionally build and equip four mobile vending carts.</p></div></div>
+          <div class="step reveal"><div class="step-num" style="background:#b55f1b">03</div><div><h3>Build the Kitigan Zibi Model</h3><p>Develop the participation process, scheduling, training and operating rules needed to make the infrastructure useful beyond one business.</p></div></div>
+          <div class="step reveal"><div class="step-num" style="background:var(--teal2)">04</div><div><h3>Bring Ottawa a Launch-Ready Project</h3><p>Instead of arriving with an idea and asking Ottawa to build it, we aim to arrive with:</p>
+            <ul class="checklist">
+              <li>Four funded carts</li>
+              <li>Sponsors and community partners</li>
+              <li>A working operating model</li>
+              <li>Kitigan Zibi participation</li>
+              <li>Experienced operators</li>
+              <li>A Spring 2027 launch plan</li>
+            </ul>
+          </div></div>
+        </div>
+
+        <div class="poster-frame reveal" style="margin-top:48px">
+          <img src="how-we-make-it-happen.jpg" alt="How We Make It Happen project poster">
+        </div>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="wrap reveal">
+        <h2>We build the carts.<br>We build the model.<br><span style="color:#f0c291">We need Ottawa to make space.</span></h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Why this matters</div>
+        <h2>From acknowledgement to participation.</h2>
+        <p class="lead" style="margin-top:28px">This isn't about asking anyone to create an Algonquin presence in Ottawa. Algonquin people have always belonged here. It is about creating practical pathways for Algonquin people to be visible participants in the economic life of our traditional territory.</p>
+        <div class="quote reveal">
+          <p class="big-copy">The goal isn't to visit Algonquin territory.</p>
+          <p class="script" style="font-size:clamp(2rem,5vw,4.5rem);margin:8px 0 0">It's to be visible within it.</p>
+        </div>
+
+        <div class="metrics">
+          <div class="metric reveal"><b>4</b><span>professionally built carts</span></div>
+          <div class="metric reveal"><b>4</b><span>high-visibility Ottawa locations</span></div>
+          <div class="metric reveal"><b>KZ</b><span>Kitigan Zibi participation at the centre</span></div>
+          <div class="metric reveal"><b>2027</b><span>Spring launch target</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partner" class="solution">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">Partnership</div><h2>Help us build it.</h2></div>
+          <p class="lead">Restoring Algonquin Presence will be strongest if business, community, Algonquin partners and the organizations responsible for Ottawa's major public spaces help build the project together.</p>
+        </div>
+        <div class="partner-grid">
+          <div class="partner-card reveal"><h3>Businesses & Sponsors</h3><p>Help fund a cart, equipment, construction or operations.</p></div>
+          <div class="partner-card reveal"><h3>Ottawa Organizations</h3><p>Help establish space, permits, programming, introductions and visibility.</p></div>
+          <div class="partner-card reveal"><h3>Kitigan Zibi Members</h3><p>Help shape the participation model or explore operating through the project.</p></div>
+          <div class="partner-card reveal"><h3>Community Supporters</h3><p>Share the project, make introductions and help build momentum.</p></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:kris@chelseaskitchen.ca?subject=Restoring%20Algonquin%20Presence%20Partnership">Become a Project Partner</a>
+          <a class="btn btn-dark" href="mailto:kris@chelseaskitchen.ca?subject=Restoring%20Algonquin%20Presence">Talk to Kris</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap about-grid">
+        <div>
+          <div class="eyebrow">Where this started</div>
+          <h2>Chelsea's Kitchen helped start the conversation.</h2>
+        </div>
+        <div class="about-panel reveal">
+          <p class="lead">I'm Kris Odjick, a Kitigan Zibi Algonquin entrepreneur and the founder of Chelsea's Kitchen / Bannock Bites.</p>
+          <p>What began as a small food business has increasingly become about something larger: creating visible Algonquin economic presence in Ottawa.</p>
+          <p>Chelsea's Kitchen will help establish and operate the first carts, but Restoring Algonquin Presence is being designed to create opportunities beyond my own business.</p>
+          <p><strong>This is Project One.</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="display">From Acknowledgement<br>to Presence.</div>
+        <div class="script">Four carts. Four spaces. One Algonquin presence.</div>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:kris@chelseaskitchen.ca?subject=Restoring%20Algonquin%20Presence%20Partnership">Become a Partner</a>
+          <a class="btn btn-ghost" href="mailto:kris@chelseaskitchen.ca">Contact Kris</a>
+        </div>
+      </div>
+      <div class="contact">
+        <strong>Project One • Ottawa • Spring 2027</strong>
+        <a href="mailto:kris@chelseaskitchen.ca">kris@chelseaskitchen.ca</a>
+        <a href="https://chelseaskitchen.ca">chelseaskitchen.ca</a>
+        <span>Instagram: @bannock.bites</span>
+      </div>
+    </div>
+    <div class="wrap fine">Restoring Algonquin Presence • Project concept and campaign page</div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+      })
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  </script>
+</body>
+</html>
