@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17130f">
+  <title>Contribute | Restoring Algonquin Presence</title>
+  <meta name="description" content="Help Chelsea's Kitchen turn acknowledgement into visible Algonquin presence in Ottawa.">
+  <style>
+    :root{
+      --ink:#17130f;
+      --cream:#f5efe4;
+      --paper:#fffaf2;
+      --muted:#6d645b;
+      --orange:#d66a2b;
+      --line:#ded3c5;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .topbar{
+      background:var(--ink);
+      color:#fff;
+      text-align:center;
+      font-size:.82rem;
+      letter-spacing:.04em;
+      padding:9px 15px;
+    }
+    header{
+      background:rgba(255,250,242,.96);
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(8px);
+    }
+    .nav{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:.04em;
+      font-size:1.05rem;
+    }
+    .brand small{
+      display:block;
+      color:var(--muted);
+      font-size:.68rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      margin-top:2px;
+    }
+    .navlinks{display:flex;gap:22px;align-items:center}
+    .navlinks a{
+      text-decoration:none;
+      font-size:.9rem;
+      font-weight:700;
+    }
+    .hero{
+      padding:92px 0 78px;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(214,106,43,.16), transparent 28%),
+        linear-gradient(180deg,#fffaf2 0%,#f5efe4 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .eyebrow{
+      color:var(--orange);
+      text-transform:uppercase;
+      font-weight:900;
+      letter-spacing:.12em;
+      font-size:.78rem;
+      margin-bottom:15px;
+    }
+    h1{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(3rem,7vw,6.5rem);
+      line-height:.95;
+      letter-spacing:-.045em;
+      max-width:980px;
+      margin:0;
+    }
+    .hero p{
+      max-width:760px;
+      font-size:clamp(1.1rem,2vw,1.35rem);
+      color:#403831;
+      margin:30px 0;
+    }
+    .hero strong{color:var(--ink)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-height:52px;
+      padding:0 24px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:900;
+      border:2px solid var(--ink);
+      transition:.18s ease;
+    }
+    .btn.primary{background:var(--ink);color:#fff}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.secondary{background:transparent}
+    section{padding:78px 0;border-bottom:1px solid var(--line)}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:64px;
+      align-items:start;
+    }
+    h2{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.1rem,4vw,4rem);
+      line-height:1.02;
+      letter-spacing:-.035em;
+      margin:0 0 22px;
+    }
+    h3{
+      font-size:1.1rem;
+      margin:0 0 8px;
+    }
+    p{margin:0 0 18px}
+    .lead{font-size:1.18rem;color:#403831}
+    .statement{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.7rem,3.2vw,3rem);
+      line-height:1.14;
+      border-left:5px solid var(--orange);
+      padding-left:24px;
+      margin:8px 0 30px;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:34px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+    }
+    .card .num{
+      font-size:.78rem;
+      color:var(--orange);
+      font-weight:900;
+      letter-spacing:.1em;
+      margin-bottom:26px;
+    }
+    .contribute{
+      background:var(--ink);
+      color:#fff;
+    }
+    .contribute .eyebrow{color:#f0a06e}
+    .contribute h2{max-width:800px}
+    .contribute p{color:#d9d1c8;max-width:760px}
+    .contribute .btn.primary{
+      background:#fff;
+      color:var(--ink);
+      border-color:#fff;
+    }
+    .small{
+      font-size:.84rem;
+      color:var(--muted);
+    }
+    .contribute .small{color:#aaa097;margin-top:22px}
+    .contactbox{
+      background:var(--cream);
+      border-radius:22px;
+      padding:34px;
+      border:1px solid var(--line);
+    }
+    footer{
+      padding:38px 0;
+      background:#120f0c;
+      color:#d5cec7;
+      font-size:.88rem;
+    }
+    footer .foot{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+    footer strong{color:#fff}
+    @media(max-width:760px){
+      .navlinks{display:none}
+      .hero{padding:64px 0 58px}
+      .grid{grid-template-columns:1fr;gap:32px}
+      .cards{grid-template-columns:1fr}
+      section{padding:58px 0}
+      .wrap{width:min(calc(100% - 28px),var(--max))}
+      .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">Truth &amp; Reconciliation Week 2026 • Ottawa • September 28 – October 2</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="https://chelseaskitchen.ca/">
+      CHELSEA'S KITCHEN
+      <small>Algonquin-owned • Kitigan Zibi Anishinabeg</small>
+    </a>
+    <nav class="navlinks">
+      <a href="#why">Why</a>
+      <a href="#project">The Project</a>
+      <a href="#contribute">Contribute</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Restoring Algonquin Presence</div>
+      <h1>From acknowledgement to presence.</h1>
+      <p>
+        Ottawa acknowledges every day that it sits on the unceded and unsurrendered
+        territory of the Algonquin Anishinaabe Nation. We want to turn some of that
+        acknowledgement into something people can actually see.
+      </p>
+      <p>
+        <strong>Visible Algonquin food. Visible Algonquin businesses. Visible Algonquin entrepreneurs.</strong>
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#contribute">Contribute</a>
+        <a class="btn secondary" href="https://chelseaskitchen.ca/restoring/">Read the full project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">Why this matters</div>
+        <h2>Acknowledgement and presence are not the same thing.</h2>
+      </div>
+      <div>
+        <p class="lead">
+          Walk through the ByWard Market, Sparks Street, Lansdowne or Ottawa's major
+          tourism spaces and there are remarkably few permanent places where Algonquin
+          people are visibly working, selling, creating and participating in the economy
+          of our own traditional territory.
+        </p>
+        <p>
+          Restoring Algonquin Presence is about changing that in a practical way.
+          Chelsea's Kitchen is working toward mobile commercial carts that can create
+          visible, lower-barrier places for Algonquin entrepreneurs to begin.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="wrap">
+      <div class="eyebrow">The idea</div>
+      <h2>Build the opportunity first.</h2>
+      <div class="statement">
+        Four carts. Four highly visible Ottawa spaces. One stronger Algonquin economic presence.
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="num">01</div>
+          <h3>Build the carts.</h3>
+          <p>Professionally built mobile vending infrastructure designed to operate in high-visibility public spaces.</p>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <h3>Prove the model.</h3>
+          <p>Chelsea's Kitchen can help establish the locations, generate traffic and show that the model works.</p>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <h3>Open the opportunity.</h3>
+          <p>Create a pathway for other Kitigan Zibi entrepreneurs to test ideas without first needing a storefront of their own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">TRC Week 2026</div>
+        <h2>Do something useful now while we build something bigger.</h2>
+      </div>
+      <div>
+        <p class="lead">
+          During Truth &amp; Reconciliation Week, Chelsea's Kitchen will also use this
+          campaign to put food directly into people's hands in downtown Ottawa.
+        </p>
+        <p>
+          For every $5 contributed through this campaign, Chelsea's Kitchen commits to
+          distributing one portion of baked bannock and chili downtown in early October.
+        </p>
+        <p>
+          That is the immediate commitment. The larger purpose is to keep developing the
+          infrastructure, relationships and operating model behind Restoring Algonquin Presence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contribute" class="contribute">
+    <div class="wrap">
+      <div class="eyebrow">Contribute</div>
+      <h2>If you believe Ottawa needs more visible Algonquin presence, help us build it.</h2>
+      <p class="lead">
+        There are no contribution levels here. Give what makes sense to you.
+        Every contribution helps move the work forward.
+      </p>
+      <div class="actions">
+        <a class="btn primary" id="squareButton" href="#" target="_blank" rel="noopener">Make a contribution</a>
+        <a class="btn secondary" style="border-color:#fff;color:#fff" href="mailto:kris@chelseaskitchen.ca?subject=Restoring%20Algonquin%20Presence">Talk to Kris</a>
+      </div>
+      <p class="small">
+        Contributions are made to Chelsea's Kitchen. They are not charitable donations
+        and do not qualify for charitable tax receipts.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">Transparency</div>
+        <h2>What your contribution supports.</h2>
+      </div>
+      <div>
+        <p>
+          Campaign funds support the work involved in Restoring Algonquin Presence,
+          including food distribution, supplies, equipment, cart development,
+          construction planning, outreach and related project costs.
+        </p>
+        <p>
+          This is an evolving small-business-led project. Proposed cart locations,
+          partnerships and timelines may change as permissions, funding and agreements develop.
+        </p>
+        <div class="contactbox">
+          <h3>Chelsea's Kitchen</h3>
+          <p>Algonquin-owned • Kitigan Zibi Anishinabeg</p>
+          <p>
+            Kris Odjick<br>
+            <a href="mailto:kris@chelseaskitchen.ca">kris@chelseaskitchen.ca</a><br>
+            <a href="tel:+18193341623">819-334-1623</a><br>
+            Instagram: @bannock.bites
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>CHELSEA'S KITCHEN</strong><br>From Acknowledgement to Presence.</div>
+    <div>Ottawa, Ontario • Restoring Algonquin Presence • Project One</div>
+  </div>
+</footer>
+
+<script>
+  /*
+    REPLACE THE VALUE BELOW WITH YOUR SQUARE PAYMENT / CONTRIBUTION LINK.
+    Example:
+    const SQUARE_PAYMENT_URL = "https://square.link/u/XXXXXXXX";
+  */
+  const SQUARE_PAYMENT_URL = "https://square.link/u/lCSyaCJm";
+
+  const squareButton = document.getElementById("squareButton");
+  squareButton.href = SQUARE_PAYMENT_URL;
+
+  squareButton.addEventListener("click", function (event) {
+    if (SQUARE_PAYMENT_URL === "#") {
+      event.preventDefault();
+      alert("Add your Square contribution link in the SQUARE_PAYMENT_URL line near the bottom of this file.");
+    }
+  });
+</script>
+
+</body>
+</html>
