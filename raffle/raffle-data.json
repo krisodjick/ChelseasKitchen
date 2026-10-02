@@ -1,0 +1,29 @@
+{
+  "drawDate": "December 11, 2026",
+  "entryPrice": 10,
+  "paymentUrl": "https://square.link/u/L6C77TK6?src=sheet",
+  "contactUrl": "",
+  "location": "Kitigan Zibi Anishinabeg",
+  "prizes": [
+    {
+      "name": "Christmas Dinner Package",
+      "donor": "Chelsea’s Kitchen",
+      "value": 250
+    },
+    {
+      "name": "Cash",
+      "donor": "Anonymous Donor",
+      "value": 250
+    },
+    {
+      "name": "$200 Loblaws Gift Card",
+      "donor": "Loblaws Rideau",
+      "value": 200
+    }
+  ],
+  "mysteryDraws": {
+    "startDate": "October 16, 2026",
+    "frequency": "Every second Friday",
+    "note": "Every raffle entry remains eligible for the growing grand prize draw on December 11, 2026."
+  }
+}
