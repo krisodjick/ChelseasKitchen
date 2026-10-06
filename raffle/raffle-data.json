@@ -5,6 +5,7 @@
   "contactUrl": "mailto:kris@chelseaskitchen.ca?subject=Growing%20Prize%20Raffle%20-%20Prize%20Contribution",
   "location": "Kitigan Zibi Anishinabeg",
   "prizes": [
+    {"name": "Ottawa Senators Tickets - Two", "donor": "First Assist", "value": 400},
     {"name": "Christmas Dinner Package", "donor": "Chelsea’s Kitchen", "value": 250},
     {"name": "Cash", "donor": "Anonymous Donor", "value": 350},
     {"name": "$200 Loblaws Gift Card", "donor": "Loblaws Rideau", "value": 200},
