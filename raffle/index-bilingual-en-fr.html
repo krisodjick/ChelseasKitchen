@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restoring Algonquin Presence Raffle | Tirage Restoring Algonquin Presence</title>
+<style>
+:root{--green:#153b2c;--cream:#f7f2e8;--ink:#172019;--gold:#d8a63f;--white:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink)}
+.hero{background:var(--green);color:white;text-align:center;padding:54px 20px 42px}.eyebrow{font-weight:800;letter-spacing:.16em;font-size:.8rem}.hero h1{font-size:clamp(2.1rem,7vw,4.8rem);line-height:.95;margin:14px auto;max-width:900px}.hero p{font-size:1.15rem;margin:8px auto;max-width:700px}.jackpot{font-size:clamp(3.6rem,14vw,8rem);font-weight:900;color:#ffd56e;margin:25px 0 2px}.grow{font-weight:800;letter-spacing:.12em}.cta{display:inline-block;background:var(--gold);color:#111;text-decoration:none;font-weight:900;padding:17px 27px;border-radius:10px;margin-top:24px}.cta.disabled{opacity:.6;pointer-events:none}
+main{max-width:900px;margin:auto;padding:30px 18px 70px}.card{background:white;border-radius:16px;padding:28px;margin:20px 0;box-shadow:0 5px 20px #00000012}.card h2{margin-top:0;font-size:1.8rem}.entry{text-align:center}.entry strong{font-size:2.2rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:18px}.amount{background:#eef2ee;border-radius:10px;padding:17px;font-weight:800;text-align:center}.prize{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid #ddd}.prize:last-child{border:0}.prize-name{font-weight:800}.value{font-weight:900;white-space:nowrap}.location{background:#e8eee9;border-left:6px solid var(--green)}.mystery{border-left:6px solid var(--gold);background:#fffaf0}.tagline{text-align:center;font-size:1.6rem;font-weight:900;color:var(--green)}footer{text-align:center;padding:25px;color:#59645c;font-size:.9rem}@media(max-width:550px){.prize{display:block}.value{margin-top:5px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="eyebrow">RESTORING ALGONQUIN PRESENCE</div>
+  <h1>THE GROWING PRIZE RAFFLE<br><span style="font-size:.52em">LE TIRAGE À PRIX CROISSANT</span></h1>
+  <p>Help build opportunity for Algonquin entrepreneurs — and get a chance to take home the growing prize package.<br><strong>Aidez à créer des possibilités pour les entrepreneurs algonquins et courez la chance de gagner notre ensemble de prix qui continue de grandir.</strong></p>
+  <div class="jackpot" id="total">$0</div>
+  <div class="grow">CURRENT PRIZE VALUE • AND GROWING<br>VALEUR ACTUELLE DES PRIX • ET ÇA CONTINUE</div>
+  <a id="enterTop" class="cta" href="https://square.link/u/L6C77TK6?src=sheet">ENTER THE RAFFLE / PARTICIPEZ AU TIRAGE — $10</a>
+  <div style="margin-top:14px;font-weight:800;letter-spacing:.03em">DRAW / TIRAGE : DECEMBER 11 / 11 DÉCEMBRE 2026 • KITIGAN ZIBI ANISHINABEG</div>
+</section>
+<main>
+  <section class="card entry">
+    <h2>Every $10 = One Entry<br>Chaque tranche de 10 $ = une participation</h2>
+    <p>Every additional $10 gives you one additional raffle entry.<br>Chaque tranche supplémentaire de 10 $ vous donne une participation supplémentaire.</p>
+    <div class="grid"><div class="amount">$10<br>1 Entry / participation</div><div class="amount">$20<br>2 Entries / participations</div><div class="amount">$50<br>5 Entries / participations</div><div class="amount">$100<br>10 Entries / participations</div></div>
+    <p><strong>Draw / Tirage : <span id="drawDate"></span></strong></p>
+  </section>
+  <section class="card mystery">
+    <h2>🎁 Mystery Prize Draws / Tirages de prix mystères</h2>
+    <p><strong>Starting Friday, October 16, we’ll draw a mystery prize every second Friday!<br>À compter du vendredi 16 octobre, nous ferons tirer un prix mystère un vendredi sur deux!</strong></p>
+    <p>Enter the raffle and you could win along the way — while your entry stays in for the growing grand prize draw on December 11, 2026.<br>Participez au tirage et vous pourriez gagner en cours de route, tout en conservant votre participation au grand tirage du 11 décembre 2026.</p>
+    <div class="tagline">NEXT MYSTERY DRAW: OCTOBER 16<br>PROCHAIN TIRAGE MYSTÈRE : 16 OCTOBRE</div>
+  </section>
+  <section class="card">
+    <h2>What You Can Win / Ce que vous pouvez gagner</h2>
+    <div id="prizes"></div>
+    <p><strong>Total current value / Valeur totale actuelle : <span id="totalInline">$0</span></strong></p>
+  </section>
+  <section class="card location">
+    <h2>Organized & Held in Kitigan Zibi Anishinabeg<br>Organisé et tenu à Kitigan Zibi Anishinabeg</h2>
+    <p>This raffle is organized and held in <strong>Kitigan Zibi Anishinabeg</strong>. Funds raised will support the development of <strong>Restoring Algonquin Presence</strong> and its work to create infrastructure, sales opportunities and access to larger markets for Algonquin entrepreneurs.</p><p>Ce tirage est organisé et tenu à <strong>Kitigan Zibi Anishinabeg</strong>. Les fonds recueillis serviront au développement de <strong>Restoring Algonquin Presence</strong> et à son travail visant à créer des infrastructures, des occasions de vente et un accès à de plus grands marchés pour les entrepreneurs algonquins.</p>
+  </section>
+  <section class="card">
+    <h2>What Are We Building? / Qu’est-ce que nous bâtissons?</h2>
+    <p>Restoring Algonquin Presence is about creating practical opportunities for Algonquin entrepreneurs to bring their businesses and ideas into high-traffic Ottawa markets.</p><p>Restoring Algonquin Presence vise à créer des possibilités concrètes pour permettre aux entrepreneurs algonquins d’amener leurs entreprises et leurs idées dans des marchés très fréquentés d’Ottawa.</p>
+    <p>That includes carts and professional table setups, access to markets, advertising and promotion, sales training and hands-on support, and opportunities to test ideas without taking on the usual costs of entering a major market.</p><p>Cela comprend des chariots et des installations de table professionnelles, l’accès aux marchés, la publicité et la promotion, de la formation en vente et du soutien pratique, ainsi que la possibilité de tester des idées sans assumer les coûts habituels liés à l’entrée dans un grand marché.</p>
+    <div class="tagline">FROM ACKNOWLEDGEMENT TO PRESENCE.<br>DE LA RECONNAISSANCE À LA PRÉSENCE.</div>
+  </section>
+  <section class="card entry">
+    <h2>Want to Add to the Prize? / Vous voulez contribuer aux prix?</h2>
+    <p>Businesses and individuals can contribute gift cards, products, services or experiences. Contributors can be recognized here as the prize grows.</p><p>Les entreprises et les particuliers peuvent contribuer des cartes-cadeaux, des produits, des services ou des expériences. Les contributeurs peuvent être reconnus ici à mesure que la valeur des prix augmente.</p>
+    <a id="contact" class="cta" href="mailto:kris@chelseaskitchen.ca?subject=Growing%20Prize%20Raffle%20-%20Prize%20Contribution">CONTRIBUTE A PRIZE / CONTRIBUER UN PRIX</a>
+  </section>
+</main>
+<footer>Restoring Algonquin Presence • Draw December 11, 2026 • Tirage le 11 décembre 2026</footer>
+<script>
+fetch('raffle-data.json?ts='+Date.now()).then(r=>r.json()).then(data=>{
+  const money=n=>new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0}).format(n||0);
+  const total=(data.prizes||[]).reduce((s,p)=>s+(Number(p.value)||0),0);
+  document.getElementById('total').textContent=money(total);
+  document.getElementById('totalInline').textContent=money(total);
+  document.getElementById('drawDate').textContent=data.drawDate;
+  const box=document.getElementById('prizes'); box.innerHTML='';
+  (data.prizes||[]).filter(p=>p.name && Number(p.value)>0).forEach(p=>{
+    const el=document.createElement('div'); el.className='prize';
+    el.innerHTML=`<div><div class="prize-name"></div><div class="donor"></div></div><div class="value"></div>`;
+    el.querySelector('.prize-name').textContent=p.name;
+    el.querySelector('.donor').textContent=p.donor ? 'Donated by / Offert par '+p.donor : '';
+    el.querySelector('.value').textContent=money(p.value);
+    box.appendChild(el);
+  });
+  if(!box.children.length) box.innerHTML='<p>Prize contributions will appear here as they are added. / Les contributions aux prix apparaîtront ici au fur et à mesure.</p>';
+  if(data.paymentUrl){document.getElementById('enterTop').href=data.paymentUrl}
+  if(data.contactUrl){document.getElementById('contact').href=data.contactUrl}
+}).catch(()=>{document.getElementById('prizes').innerHTML='<p>Prize information is being updated. / Les renseignements sur les prix sont en cours de mise à jour.</p>'});
+</script>
+</body></html>
