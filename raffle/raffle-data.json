@@ -9,6 +9,8 @@
     {"name": "Christmas Dinner Package", "donor": "Chelsea’s Kitchen", "value": 250},
     {"name": "Cash", "donor": "Anonymous Donor", "value": 350},
     {"name": "$200 Loblaws Gift Card", "donor": "Loblaws Rideau", "value": 200},
+     {"name": "$100 Tim Hortons Gift Card", "donor": "Butch Dumont", "value": 100},
+     {"name": "2 x $50 Hawks Trading Post Gift Card", "donor": "Dawna Dumont", "value": 100},
     {"name": "$100 Metro Gift Card", "donor": "", "value": 100},
     {"name": "$50 Prepaid Visa", "donor": "", "value": 50}
   ],
